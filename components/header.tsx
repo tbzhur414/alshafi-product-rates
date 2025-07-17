@@ -21,7 +21,7 @@ export function Header({ searchTerm, onSearchChange }: HeaderProps) {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-semibold text-primary">
           <Image
-            src="/products/al-shafi-logo.png?height=32&width=32" // Placeholder for your logo
+            src="/placeholder.svg?height=32&width=32" // Placeholder for your logo
             width={32}
             height={32}
             alt="AL-Shhafi Group Global Logo"

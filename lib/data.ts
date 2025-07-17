@@ -1,3 +1,6 @@
+// This file defines the initial product data for seeding the database.
+// In the live application, product data is fetched from Supabase.
+
 import { createSupabaseServerClient } from "./supabase/server"
 import { type Product, PAKISTAN_REGIONS } from "./types" // Import from new types file
 
@@ -12,7 +15,7 @@ export const initialProductsData: Product[] = [
     name: "A-S BARKAT",
     category: "A-S",
     currentRate: 1200,
-    imageUrl: "products/barkat-as.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "Standard policy for A-S BARKAT. Refer to sales guidelines for terms.",
     regionRates: [
       { region: "Punjab", rate: 1180 },
@@ -23,13 +26,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 1220 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "A-S VAH",
     name: "A-S VAH",
     category: "A-S",
     currentRate: 1300,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "Premium A-S VAH product. Limited stock, advance booking recommended.",
     regionRates: [
       { region: "Punjab", rate: 1280 },
@@ -40,13 +44,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 1320 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "A-S 7STAR",
     name: "A-S 7STAR",
     category: "A-S",
     currentRate: 850,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "A-S 7STAR: Available in various sizes. Check packaging details.",
     regionRates: [
       { region: "Punjab", rate: 830 },
@@ -57,6 +62,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 870 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Lahore Warehouse", cost: 30 }] },
+    isAvailable: true, // Default availability
   },
 
   // CAN Category
@@ -65,7 +71,7 @@ export const initialProductsData: Product[] = [
     name: "CAN F PAKARAB",
     category: "CAN",
     currentRate: 900,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "PAKARAB CAN: High-fat content variant. Ideal for specific industrial applications.",
     regionRates: [
       { region: "Punjab", rate: 880 },
@@ -76,13 +82,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 920 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "CAN G FATIMA",
     name: "CAN G FATIMA",
     category: "CAN",
     currentRate: 2500,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "FATIMA CAN: Premium fertilizer. Bulk purchase options available.",
     regionRates: [
       { region: "Punjab", rate: 2480 },
@@ -93,6 +100,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2520 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Karachi Port", cost: 100 }] },
+    isAvailable: true, // Default availability
   },
 
   // DAP Category
@@ -101,7 +109,7 @@ export const initialProductsData: Product[] = [
     name: "DAP BARKET-SV",
     category: "DAP",
     currentRate: 2450,
-    imageUrl: "products/barkat-dap.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "BARKET DAP: Standard grade DAP. Widely available.",
     regionRates: [
       { region: "Punjab", rate: 2430 },
@@ -112,13 +120,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2470 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "DAP ENGRO",
     name: "DAP ENGRO",
     category: "DAP",
     currentRate: 2600,
-    imageUrl: "products/engro-dap.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "ENGRO DAP: High-quality DAP. Preferred by large-scale farms.",
     regionRates: [
       { region: "Punjab", rate: 2580 },
@@ -129,13 +138,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2620 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Faisalabad Logistics", cost: 120 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "DAP FFBL",
     name: "DAP FFBL",
     category: "DAP",
     currentRate: 2580,
-    imageUrl: "products/dap-sona-imported.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "FFBL DAP: Reliable and consistent performance. Bulk order discounts.",
     regionRates: [
       { region: "Punjab", rate: 2560 },
@@ -146,13 +156,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2600 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "DAP FFC",
     name: "DAP FFC",
     category: "DAP",
     currentRate: 2570,
-    imageUrl: "products/dap-sona.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "FFC DAP: Trusted brand in agriculture. Available nationwide.",
     regionRates: [
       { region: "Punjab", rate: 2550 },
@@ -163,13 +174,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2590 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Multan Depot", cost: 90 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "DAP SARSABZ(FAT)",
     name: "DAP SARSABZ(FAT)",
     category: "DAP",
     currentRate: 2590,
-    imageUrl: "products/dap-ss.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SARSABZ DAP: Enriched formula for better yield. Seasonal availability.",
     regionRates: [
       { region: "Punjab", rate: 2570 },
@@ -180,13 +192,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2610 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "DAP SONA",
     name: "DAP SONA",
     category: "DAP",
     currentRate: 2560,
-    imageUrl: "products/dap-sona.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SONA DAP: Cost-effective solution for general farming. Large quantities available.",
     regionRates: [
       { region: "Punjab", rate: 2540 },
@@ -197,13 +210,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2580 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Peshawar Distribution", cost: 80 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "VAH AUSTRALIAN",
     name: "VAH AUSTRALIAN",
     category: "DAP",
     currentRate: 700,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "VAH Australian: Imported quality DAP. Best for soil conditioning.",
     regionRates: [
       { region: "Punjab", rate: 680 },
@@ -214,6 +228,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 720 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
 
   // MOP Category
@@ -222,7 +237,7 @@ export const initialProductsData: Product[] = [
     name: "MOP BARKAT-PINK-G",
     category: "MOP",
     currentRate: 1850,
-    imageUrl: "products/barkat-mop.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "BARKAT Pink MOP: Granular form, easy application. Limited edition.",
     regionRates: [
       { region: "Punjab", rate: 1830 },
@@ -233,13 +248,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 1870 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "MOP BARKAT-WHITE-G",
     name: "MOP BARKAT-WHITE-G",
     category: "MOP",
     currentRate: 1800,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "BARKAT White MOP: Standard MOP product. Essential for potassium deficiency.",
     regionRates: [
       { region: "Punjab", rate: 1780 },
@@ -250,6 +266,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 1820 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Quetta Agri Port", cost: 60 }] },
+    isAvailable: true, // Default availability
   },
 
   // NP Category
@@ -258,7 +275,7 @@ export const initialProductsData: Product[] = [
     name: "NP ENGRO PLUS-18:18",
     category: "NP",
     currentRate: 1600,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "ENGRO PLUS NP: 18:18 ratio. Enhanced formula for robust plant development.",
     regionRates: [
       { region: "Punjab", rate: 1580 },
@@ -269,13 +286,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 1620 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "NP PAKARAB",
     name: "NP PAKARAB",
     category: "NP",
     currentRate: 1550,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "PAKARAB NP: Fat-enriched NP. Improves soil fertility and crop yield.",
     regionRates: [
       { region: "Punjab", rate: 1530 },
@@ -286,6 +304,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 1570 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Hyderabad Depot", cost: 35 }] },
+    isAvailable: true, // Default availability
   },
 
   // SOP Category
@@ -294,7 +313,7 @@ export const initialProductsData: Product[] = [
     name: "SARSABZ(SOP)",
     category: "SOP",
     currentRate: 2200,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SARSABZ SOP: Granular SOP. Ideal for crops sensitive to chloride.",
     regionRates: [
       { region: "Punjab", rate: 2180 },
@@ -305,13 +324,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2220 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "SOP-G BARKAT",
     name: "SOP-G BARKAT",
     category: "SOP",
     currentRate: 2150,
-    imageUrl: "products/barkat-sop-g.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "BARKAT SOP-G: Standard granular SOP. Consistent quality.",
     regionRates: [
       { region: "Punjab", rate: 2130 },
@@ -322,13 +342,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2170 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Sialkot Port", cost: 70 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "SOP-G FFC",
     name: "SOP-G FFC",
     category: "SOP",
     currentRate: 2180,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "FFC SOP-G: Reliable granular SOP. Widely used in horticulture.",
     regionRates: [
       { region: "Punjab", rate: 2160 },
@@ -339,13 +360,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2200 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "SOP-P BARKAT",
     name: "SOP-P BARKAT",
     category: "SOP",
     currentRate: 2250,
-    imageUrl: "products/barkat-sop-p.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "BARKAT SOP-P: Powder form. Suitable for foliar application.",
     regionRates: [
       { region: "Punjab", rate: 2230 },
@@ -356,13 +378,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2270 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "SOP-P VAH",
     name: "SOP-P VAH",
     category: "SOP",
     currentRate: 2300,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "VAH SOP-P: Powder form, 25-KG bags. Quick dissolution.",
     regionRates: [
       { region: "Punjab", rate: 2280 },
@@ -373,6 +396,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 2320 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Rawalpindi Warehouse", cost: 55 }] },
+    isAvailable: true, // Default availability
   },
 
   // SSPG Category
@@ -381,7 +405,7 @@ export const initialProductsData: Product[] = [
     name: "SSPG TARA",
     category: "SSPG",
     currentRate: 950,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SSPG TARA: Single Super Phosphate Granular. Essential for phosphorus supply.",
     regionRates: [
       { region: "Punjab", rate: 930 },
@@ -392,6 +416,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 970 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Sukkur Hub", cost: 25 }] },
+    isAvailable: true, // Default availability
   },
 
   // UREA Category
@@ -400,7 +425,7 @@ export const initialProductsData: Product[] = [
     name: "UREA B-S (FAT)",
     category: "UREA",
     currentRate: 3600,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "B-S FAT UREA: Fat-coated urea for slow release. Reduces nitrogen loss.",
     regionRates: [
       { region: "Punjab", rate: 3580 },
@@ -411,13 +436,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3620 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Multan Specialty Depot", cost: 150 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA ENGRO",
     name: "UREA ENGRO",
     category: "UREA",
     currentRate: 3700,
-    imageUrl: "products/engro-urea.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "ENGRO UREA: Premium urea. Widely trusted brand.",
     regionRates: [
       { region: "Punjab", rate: 3680 },
@@ -428,13 +454,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3720 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA ENGRO (NFML)",
     name: "UREA ENGRO (NFML)",
     category: "UREA",
     currentRate: 3720,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "ENGRO NFML UREA: Non-Farm Mechanized Logistics. Specific distribution channels.",
     regionRates: [
       { region: "Punjab", rate: 3700 },
@@ -445,13 +472,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3740 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Remote Hub AJK", cost: 180 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA FATIMA (NFML)(FAT)",
     name: "UREA FATIMA (NFML)(FAT)",
     category: "UREA",
     currentRate: 3680,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "FATIMA NFML FAT UREA: Fat-coated, non-farm logistics. Enhanced efficiency.",
     regionRates: [
       { region: "Punjab", rate: 3660 },
@@ -462,13 +490,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3700 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA FATIMA(FAT)",
     name: "UREA FATIMA(FAT)",
     category: "UREA",
     currentRate: 3650,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "FATIMA FAT UREA: Fat-coated urea. Improved nutrient uptake.",
     regionRates: [
       { region: "Punjab", rate: 3630 },
@@ -479,13 +508,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3670 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Islamabad Distribution", cost: 130 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA IMP.",
     name: "UREA IMP.",
     category: "UREA",
     currentRate: 3400,
-    imageUrl: "products/urea-sona.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "IMP. UREA: Imported urea. Competitive pricing.",
     regionRates: [
       { region: "Punjab", rate: 3380 },
@@ -496,13 +526,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3420 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA SONA-G",
     name: "UREA SONA-G",
     category: "UREA",
     currentRate: 3550,
-    imageUrl: "products/urea-sona-g.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SONA-G UREA: Granular urea. Easy to spread.",
     regionRates: [
       { region: "Punjab", rate: 3530 },
@@ -513,13 +544,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3570 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Local Farm Store KPK", cost: 110 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA SONA-NEEM COATED",
     name: "UREA SONA-NEEM COATED",
     category: "UREA",
     currentRate: 3620,
-    imageUrl: "products/urea-sona-nc.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SONA Neem Coated UREA: Neem coated for slow release and pest deterrence.",
     regionRates: [
       { region: "Punjab", rate: 3600 },
@@ -530,13 +562,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3640 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA SONA-P",
     name: "UREA SONA-P",
     category: "UREA",
     currentRate: 3580,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SONA-P UREA: Powdered urea. Quick action.",
     regionRates: [
       { region: "Punjab", rate: 3560 },
@@ -547,13 +580,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3600 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Agri-Service Point Balochistan", cost: 105 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA SONA-P (NFML)",
     name: "UREA SONA-P (NFML)",
     category: "UREA",
     currentRate: 3600,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SONA-P NFML UREA: Powdered, non-farm logistics. Efficient delivery.",
     regionRates: [
       { region: "Punjab", rate: 3580 },
@@ -564,13 +598,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3620 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA TARA",
     name: "UREA TARA",
     category: "UREA",
     currentRate: 3530,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "TARA UREA: Standard urea. High nitrogen content.",
     regionRates: [
       { region: "Punjab", rate: 3510 },
@@ -581,13 +616,14 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3550 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Regional Hub Gilgit", cost: 95 }] },
+    isAvailable: true, // Default availability
   },
   {
     id: "UREA TARA (NFML)",
     name: "UREA TARA (NFML)",
     category: "UREA",
     currentRate: 3560,
-    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "TARA NFML UREA: Non-Farm Mechanized Logistics. Specific distribution channels.",
     regionRates: [
       { region: "Punjab", rate: 3540 },
@@ -598,6 +634,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 3580 },
     ],
     transhipmentInfo: { available: false },
+    isAvailable: true, // Default availability
   },
 
   // ZARKHAIZ Category
@@ -606,7 +643,7 @@ export const initialProductsData: Product[] = [
     name: "ZARKHAIZ PLUS(MOP)",
     category: "ZARKHAIZ",
     currentRate: 1900,
-    imageUrl: "products/zarkhaiz-plus-sop-engro.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "ZARKHAIZ MOP(PLUS): Premium soil enhancer. Boosts overall plant health.",
     regionRates: [
       { region: "Punjab", rate: 1880 },
@@ -617,6 +654,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 1920 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Specialty Farm Sindh", cost: 65 }] },
+    isAvailable: true, // Default availability
   },
 
   // ZINC Category
@@ -625,7 +663,7 @@ export const initialProductsData: Product[] = [
     name: "ZINC SONA",
     category: "ZINC",
     currentRate: 1220,
-    imageUrl: "products/zinc-sona.png?height=100&width=100",
+    imageUrl: "/placeholder.svg?height=100&width=100",
     policy: "SONA ZINC: High-quality Zinc. Consistent performance.",
     regionRates: [
       { region: "Punjab", rate: 1200 },
@@ -636,6 +674,7 @@ export const initialProductsData: Product[] = [
       { region: "Azad Jammu and Kashmir", rate: 1240 },
     ],
     transhipmentInfo: { available: true, rates: [{ location: "Main Port Karachi", cost: 45 }] },
+    isAvailable: true, // Default availability
   },
 ]
 
@@ -665,6 +704,7 @@ export const getProducts = async (): Promise<Product[]> => {
     policy: item.policy,
     regionRates: item.region_rates,
     transhipmentInfo: item.transhipment_info,
+    isAvailable: item.is_available, // New: Map is_available
   }))
 }
 
@@ -690,5 +730,6 @@ export const getProductById = async (id: string): Promise<Product | undefined> =
     policy: data.policy,
     regionRates: data.region_rates,
     transhipmentInfo: data.transhipment_info,
+    isAvailable: data.is_available, // New: Map is_available
   }
 }

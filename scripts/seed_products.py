@@ -17,7 +17,7 @@ initial_products_data = [
         "name": "A-S BARKAT",
         "category": "A-S",
         "currentRate": 1200,
-        "imageUrl": "products/barkat-as.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "Standard policy for A-S BARKAT. Refer to sales guidelines for terms.",
         "regionRates": [
             {"region": "Punjab", "rate": 1180}, {"region": "Sindh", "rate": 1230},
@@ -32,7 +32,7 @@ initial_products_data = [
         "name": "A-S VAH",
         "category": "A-S",
         "currentRate": 1300,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "Premium A-S VAH product. Limited stock, advance booking recommended.",
         "regionRates": [
             {"region": "Punjab", "rate": 1280}, {"region": "Sindh", "rate": 1330},
@@ -47,7 +47,7 @@ initial_products_data = [
         "name": "A-S 7STAR",
         "category": "A-S",
         "currentRate": 850,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "A-S 7STAR: Available in various sizes. Check packaging details.",
         "regionRates": [
             {"region": "Punjab", "rate": 830}, {"region": "Sindh", "rate": 880},
@@ -64,7 +64,7 @@ initial_products_data = [
         "name": "CAN F PAKARAB",
         "category": "CAN",
         "currentRate": 900,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "PAKARAB CAN: High-fat content variant. Ideal for specific industrial applications.",
         "regionRates": [
             {"region": "Punjab", "rate": 880}, {"region": "Sindh", "rate": 930},
@@ -79,7 +79,7 @@ initial_products_data = [
         "name": "CAN G FATIMA",
         "category": "CAN",
         "currentRate": 2500,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "FATIMA CAN: Premium fertilizer. Bulk purchase options available.",
         "regionRates": [
             {"region": "Punjab", "rate": 2480}, {"region": "Sindh", "rate": 2530},
@@ -96,7 +96,7 @@ initial_products_data = [
         "name": "DAP BARKET-SV",
         "category": "DAP",
         "currentRate": 2450,
-        "imageUrl": "products/barkat-dap.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "BARKET DAP: Standard grade DAP. Widely available.",
         "regionRates": [
             {"region": "Punjab", "rate": 2430}, {"region": "Sindh", "rate": 2480},
@@ -111,7 +111,7 @@ initial_products_data = [
         "name": "DAP ENGRO",
         "category": "DAP",
         "currentRate": 2600,
-        "imageUrl": "products/engro-dap.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "ENGRO DAP: High-quality DAP. Preferred by large-scale farms.",
         "regionRates": [
             {"region": "Punjab", "rate": 2580}, {"region": "Sindh", "rate": 2630},
@@ -126,7 +126,7 @@ initial_products_data = [
         "name": "DAP FFBL",
         "category": "DAP",
         "currentRate": 2580,
-        "imageUrl": "products/dao-sona-imported.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "FFBL DAP: Reliable and consistent performance. Bulk order discounts.",
         "regionRates": [
             {"region": "Punjab", "rate": 2560}, {"region": "Sindh", "rate": 2610},
@@ -141,7 +141,7 @@ initial_products_data = [
         "name": "DAP FFC",
         "category": "DAP",
         "currentRate": 2570,
-        "imageUrl": "products/dap-sona.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "FFC DAP: Trusted brand in agriculture. Available nationwide.",
         "regionRates": [
             {"region": "Punjab", "rate": 2550}, {"region": "Sindh", "rate": 2600},
@@ -156,7 +156,7 @@ initial_products_data = [
         "name": "DAP SARSABZ(FAT)",
         "category": "DAP",
         "currentRate": 2590,
-        "imageUrl": "products/dap-ss.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SARSABZ DAP: Enriched formula for better yield. Seasonal availability.",
         "regionRates": [
             {"region": "Punjab", "rate": 2570}, {"region": "Sindh", "rate": 2620},
@@ -171,7 +171,7 @@ initial_products_data = [
         "name": "DAP SONA",
         "category": "DAP",
         "currentRate": 2560,
-        "imageUrl": "products/dap-sona.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SONA DAP: Cost-effective solution for general farming. Large quantities available.",
         "regionRates": [
             {"region": "Punjab", "rate": 2540}, {"region": "Sindh", "rate": 2590},
@@ -186,7 +186,7 @@ initial_products_data = [
         "name": "VAH AUSTRALIAN",
         "category": "DAP",
         "currentRate": 700,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "VAH Australian: Imported quality DAP. Best for soil conditioning.",
         "regionRates": [
             {"region": "Punjab", "rate": 680}, {"region": "Sindh", "rate": 730},
@@ -203,7 +203,7 @@ initial_products_data = [
         "name": "MOP BARKAT-PINK-G",
         "category": "MOP",
         "currentRate": 1850,
-        "imageUrl": "products/barkat-mop.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "BARKAT Pink MOP: Granular form, easy application. Limited edition.",
         "regionRates": [
             {"region": "Punjab", "rate": 1830}, {"region": "Sindh", "rate": 1880},
@@ -218,7 +218,7 @@ initial_products_data = [
         "name": "MOP BARKAT-WHITE-G",
         "category": "MOP",
         "currentRate": 1800,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "BARKAT White MOP: Standard MOP product. Essential for potassium deficiency.",
         "regionRates": [
             {"region": "Punjab", "rate": 1780}, {"region": "Sindh", "rate": 1830},
@@ -235,7 +235,7 @@ initial_products_data = [
         "name": "NP ENGRO PLUS-18:18",
         "category": "NP",
         "currentRate": 1600,
-        "imageUrl": "products/engro-np-plus.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "ENGRO PLUS NP: 18:18 ratio. Enhanced formula for robust plant development.",
         "regionRates": [
             {"region": "Punjab", "rate": 1580}, {"region": "Sindh", "rate": 1630},
@@ -250,7 +250,7 @@ initial_products_data = [
         "name": "NP PAKARAB",
         "category": "NP",
         "currentRate": 1550,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "PAKARAB NP: Fat-enriched NP. Improves soil fertility and crop yield.",
         "regionRates": [
             {"region": "Punjab", "rate": 1530}, {"region": "Sindh", "rate": 1580},
@@ -267,7 +267,7 @@ initial_products_data = [
         "name": "SARSABZ(SOP)",
         "category": "SOP",
         "currentRate": 2200,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SARSABZ SOP: Granular SOP. Ideal for crops sensitive to chloride.",
         "regionRates": [
             {"region": "Punjab", "rate": 2180}, {"region": "Sindh", "rate": 2230},
@@ -282,7 +282,7 @@ initial_products_data = [
         "name": "SOP-G BARKAT",
         "category": "SOP",
         "currentRate": 2150,
-        "imageUrl": "products/barkat-sop-g.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "BARKAT SOP-G: Standard granular SOP. Consistent quality.",
         "regionRates": [
             {"region": "Punjab", "rate": 2130}, {"region": "Sindh", "rate": 2180},
@@ -297,7 +297,7 @@ initial_products_data = [
         "name": "SOP-G FFC",
         "category": "SOP",
         "currentRate": 2180,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "FFC SOP-G: Reliable granular SOP. Widely used in horticulture.",
         "regionRates": [
             {"region": "Punjab", "rate": 2160}, {"region": "Sindh", "rate": 2210},
@@ -312,7 +312,7 @@ initial_products_data = [
         "name": "SOP-P BARKAT",
         "category": "SOP",
         "currentRate": 2250,
-        "imageUrl": "products/barkat-sop-p.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "BARKAT SOP-P: Powder form. Suitable for foliar application.",
         "regionRates": [
             {"region": "Punjab", "rate": 2230}, {"region": "Sindh", "rate": 2280},
@@ -327,7 +327,7 @@ initial_products_data = [
         "name": "SOP-P VAH",
         "category": "SOP",
         "currentRate": 2300,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "VAH SOP-P: Powder form, 25-KG bags. Quick dissolution.",
         "regionRates": [
             {"region": "Punjab", "rate": 2280}, {"region": "Sindh", "rate": 2330},
@@ -344,7 +344,7 @@ initial_products_data = [
         "name": "SSPG TARA",
         "category": "SSPG",
         "currentRate": 950,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SSPG TARA: Single Super Phosphate Granular. Essential for phosphorus supply.",
         "regionRates": [
             {"region": "Punjab", "rate": 930}, {"region": "Sindh", "rate": 980},
@@ -361,7 +361,7 @@ initial_products_data = [
         "name": "UREA B-S (FAT)",
         "category": "UREA",
         "currentRate": 3600,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "B-S FAT UREA: Fat-coated urea for slow release. Reduces nitrogen loss.",
         "regionRates": [
             {"region": "Punjab", "rate": 3580}, {"region": "Sindh", "rate": 3630},
@@ -376,7 +376,7 @@ initial_products_data = [
         "name": "UREA ENGRO",
         "category": "UREA",
         "currentRate": 3700,
-        "imageUrl": "products/engro-urea.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "ENGRO UREA: Premium urea. Widely trusted brand.",
         "regionRates": [
             {"region": "Punjab", "rate": 3680}, {"region": "Sindh", "rate": 3730},
@@ -391,7 +391,7 @@ initial_products_data = [
         "name": "UREA ENGRO (NFML)",
         "category": "UREA",
         "currentRate": 3720,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "ENGRO NFML UREA: Non-Farm Mechanized Logistics. Specific distribution channels.",
         "regionRates": [
             {"region": "Punjab", "rate": 3700}, {"region": "Sindh", "rate": 3750},
@@ -406,7 +406,7 @@ initial_products_data = [
         "name": "UREA FATIMA (NFML)(FAT)",
         "category": "UREA",
         "currentRate": 3680,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "FATIMA NFML FAT UREA: Fat-coated, non-farm logistics. Enhanced efficiency.",
         "regionRates": [
             {"region": "Punjab", "rate": 3660}, {"region": "Sindh", "rate": 3710},
@@ -421,7 +421,7 @@ initial_products_data = [
         "name": "UREA FATIMA(FAT)",
         "category": "UREA",
         "currentRate": 3650,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "FATIMA FAT UREA: Fat-coated urea. Improved nutrient uptake.",
         "regionRates": [
             {"region": "Punjab", "rate": 3630}, {"region": "Sindh", "rate": 3680},
@@ -436,7 +436,7 @@ initial_products_data = [
         "name": "UREA IMP.",
         "category": "UREA",
         "currentRate": 3400,
-        "imageUrl": "products/urea-sona-ed.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "IMP. UREA: Imported urea. Competitive pricing.",
         "regionRates": [
             {"region": "Punjab", "rate": 3380}, {"region": "Sindh", "rate": 3430},
@@ -451,7 +451,7 @@ initial_products_data = [
         "name": "UREA SONA-G",
         "category": "UREA",
         "currentRate": 3550,
-        "imageUrl": "products/urea-sona-g.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SONA-G UREA: Granular urea. Easy to spread.",
         "regionRates": [
             {"region": "Punjab", "rate": 3530}, {"region": "Sindh", "rate": 3580},
@@ -466,7 +466,7 @@ initial_products_data = [
         "name": "UREA SONA-NEEM COATED",
         "category": "UREA",
         "currentRate": 3620,
-        "imageUrl": "products/urea-sona-nc.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SONA Neem Coated UREA: Neem coated for slow release and pest deterrence.",
         "regionRates": [
             {"region": "Punjab", "rate": 3600}, {"region": "Sindh", "rate": 3650},
@@ -481,7 +481,7 @@ initial_products_data = [
         "name": "UREA SONA-P",
         "category": "UREA",
         "currentRate": 3580,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SONA-P UREA: Powdered urea. Quick action.",
         "regionRates": [
             {"region": "Punjab", "rate": 3560}, {"region": "Sindh", "rate": 3610},
@@ -496,7 +496,7 @@ initial_products_data = [
         "name": "UREA SONA-P (NFML)",
         "category": "UREA",
         "currentRate": 3600,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SONA-P NFML UREA: Powdered, non-farm logistics. Efficient delivery.",
         "regionRates": [
             {"region": "Punjab", "rate": 3580}, {"region": "Sindh", "rate": 3630},
@@ -511,7 +511,7 @@ initial_products_data = [
         "name": "UREA TARA",
         "category": "UREA",
         "currentRate": 3530,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "TARA UREA: Standard urea. High nitrogen content.",
         "regionRates": [
             {"region": "Punjab", "rate": 3510}, {"region": "Sindh", "rate": 3560},
@@ -526,7 +526,7 @@ initial_products_data = [
         "name": "UREA TARA (NFML)",
         "category": "UREA",
         "currentRate": 3560,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "TARA NFML UREA: Non-Farm Mechanized Logistics. Specific distribution channels.",
         "regionRates": [
             {"region": "Punjab", "rate": 3540}, {"region": "Sindh", "rate": 3590},
@@ -543,7 +543,7 @@ initial_products_data = [
         "name": "ZABARDAST ZARKHAIZ",
         "category": "ZARKHAIZ",
         "currentRate": 1900,
-        "imageUrl": "products/zarkhaiz-plus-sop-engro.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "ZABARDAST ZARKHAIZ: Premium soil enhancer. Boosts overall plant health.",
         "regionRates": [
             {"region": "Punjab", "rate": 1880}, {"region": "Sindh", "rate": 1930},
@@ -560,7 +560,7 @@ initial_products_data = [
         "name": "PLUS(MOP) ZINC",
         "category": "ZINC",
         "currentRate": 1050,
-        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "PLUS ZINC: MOP-enriched zinc. Corrects zinc deficiencies.",
         "regionRates": [
             {"region": "Punjab", "rate": 1030}, {"region": "Sindh", "rate": 1080},
@@ -575,7 +575,7 @@ initial_products_data = [
         "name": "ZINC SONA",
         "category": "ZINC",
         "currentRate": 1220,
-        "imageUrl": "products/zinc-sona.png?height=100&width=100",
+        "imageUrl": "/placeholder.svg?height=100&width=100",
         "policy": "SONA ZINC: High-quality Zinc. Consistent performance.",
         "regionRates": [
             {"region": "Punjab", "rate": 1200}, {"region": "Sindh", "rate": 1250},
