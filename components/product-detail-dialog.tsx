@@ -1,8 +1,7 @@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import type { Product } from "@/lib/types" // Updated import path
+import type { Product } from "@/lib/data"
 import Image from "next/image"
-import { cn } from "@/lib/utils" // Import cn for conditional class names
 
 interface ProductDetailDialogProps {
   product: Product | null
@@ -24,8 +23,8 @@ export function ProductDetailDialog({ product, isOpen, onClose }: ProductDetailD
           <div className="flex items-center gap-4">
             <Image
               src={product.imageUrl || "/placeholder.svg"}
-              width={120} // Increased size
-              height={120} // Increased size
+              width={80}
+              height={80}
               alt={product.name}
               className="rounded-md object-cover"
             />
@@ -33,9 +32,6 @@ export function ProductDetailDialog({ product, isOpen, onClose }: ProductDetailD
               <h3 className="text-xl font-bold">{product.name}</h3>
               <p className="text-muted-foreground">Current Rate: Rs. {product.currentRate.toFixed(2)}</p>
               <p className="text-muted-foreground">Category: {product.category}</p>
-              <p className={cn("text-sm font-semibold mt-2", product.isAvailable ? "text-green-600" : "text-red-600")}>
-                Status: {product.isAvailable ? "Available" : "Not Available"}
-              </p>
             </div>
           </div>
 
