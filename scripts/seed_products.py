@@ -32,7 +32,7 @@ initial_products_data = [
         "name": "A-S VAH",
         "category": "A-S",
         "currentRate": 1300,
-        "imageUrl": "products/dummy-bag.png?height=100&width=100",
+        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
         "policy": "Premium A-S VAH product. Limited stock, advance booking recommended.",
         "regionRates": [
             {"region": "Punjab", "rate": 1280}, {"region": "Sindh", "rate": 1330},
@@ -47,7 +47,7 @@ initial_products_data = [
         "name": "A-S 7STAR",
         "category": "A-S",
         "currentRate": 850,
-        "imageUrl": "products/dummy-bag.png?height=100&width=100",
+        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
         "policy": "A-S 7STAR: Available in various sizes. Check packaging details.",
         "regionRates": [
             {"region": "Punjab", "rate": 830}, {"region": "Sindh", "rate": 880},
@@ -64,7 +64,7 @@ initial_products_data = [
         "name": "CAN F PAKARAB",
         "category": "CAN",
         "currentRate": 900,
-        "imageUrl": "products/dummy-bag.png?height=100&width=100",
+        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
         "policy": "PAKARAB CAN: High-fat content variant. Ideal for specific industrial applications.",
         "regionRates": [
             {"region": "Punjab", "rate": 880}, {"region": "Sindh", "rate": 930},
@@ -79,7 +79,7 @@ initial_products_data = [
         "name": "CAN G FATIMA",
         "category": "CAN",
         "currentRate": 2500,
-        "imageUrl": "products/dummy-bag.png?height=100&width=100",
+        "imageUrl": "products/dummy-bag.jpg?height=100&width=100",
         "policy": "FATIMA CAN: Premium fertilizer. Bulk purchase options available.",
         "regionRates": [
             {"region": "Punjab", "rate": 2480}, {"region": "Sindh", "rate": 2530},
@@ -126,7 +126,7 @@ initial_products_data = [
         "name": "DAP FFBL",
         "category": "DAP",
         "currentRate": 2580,
-        "imageUrl": "products/dummy-bag.png?height=100&width=100",
+        "imageUrl": "products/?height=100&width=100",
         "policy": "FFBL DAP: Reliable and consistent performance. Bulk order discounts.",
         "regionRates": [
             {"region": "Punjab", "rate": 2560}, {"region": "Sindh", "rate": 2610},
