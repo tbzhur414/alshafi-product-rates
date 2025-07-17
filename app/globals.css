@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --primary: 120 60% 30%; /* Deep Green */
+    --primary-foreground: 210 20% 98%; /* Off-white */
+
+    --secondary: 30 40% 40%; /* Earthy Brown */
+    --secondary-foreground: 210 20% 98%; /* Off-white */
+
+    --muted: 210 40% 96.1%; /* Light Gray */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Medium Gray */
+
+    --accent: 80 70% 50%; /* Vibrant Green */
+    --accent-foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 210 20% 98%; /* Off-white */
+
+    --border: 214.3 31.8% 91.4%; /* Light Gray Border */
+    --input: 214.3 31.8% 91.4%; /* Light Gray Input */
+    --ring: 120 60% 30%; /* Primary Green for focus ring */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* Dark Gray */
+    --foreground: 210 20% 98%; /* Off-white */
+
+    --card: 222.2 84% 4.9%; /* Dark Gray */
+    --card-foreground: 210 20% 98%; /* Off-white */
+
+    --popover: 222.2 84% 4.9%; /* Dark Gray */
+    --popover-foreground: 210 20% 98%; /* Off-white */
+
+    --primary: 120 60% 40%; /* Slightly lighter green for dark mode */
+    --primary-foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --secondary: 30 40% 30%; /* Slightly darker brown for dark mode */
+    --secondary-foreground: 210 20% 98%; /* Off-white */
+
+    --muted: 217.2 32.6% 17.5%; /* Darker Muted Gray */
+    --muted-foreground: 215 20.2% 65.1%; /* Lighter Muted Gray */
+
+    --accent: 80 70% 40%; /* Slightly darker vibrant green for dark mode */
+    --accent-foreground: 210 20% 98%; /* Off-white */
+
+    --destructive: 0 62.8% 30.6%; /* Darker Red */
+    --destructive-foreground: 210 20% 98%; /* Off-white */
+
+    --border: 217.2 32.6% 17.5%; /* Darker Border */
+    --input: 217.2 32.6% 17.5%; /* Darker Input */
+    --ring: 120 60% 40%; /* Primary Green for focus ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
