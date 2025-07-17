@@ -7,29 +7,49 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
-import { getProducts, getProductById, type Product } from "@/lib/data"
+import { type Product, PAKISTAN_REGIONS } from "@/lib/types" // Updated import path
 import { updateProductDetails } from "@/lib/actions"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { PlusCircle, MinusCircle } from "lucide-react"
 
-export function AdminProductEditor() {
+interface AdminProductEditorProps {
+  initialProducts: Product[]
+  productToEditId?: string // Optional prop to specify which product to edit directly
+  onClose?: () => void // Optional callback to close a parent dialog
+  onProductUpdated?: (updatedProduct: Product) => void // Optional callback for when a product is updated
+}
+
+export function AdminProductEditor({
+  initialProducts,
+  productToEditId,
+  onClose,
+  onProductUpdated,
+}: AdminProductEditorProps) {
   const { toast } = useToast()
-  const allProducts = getProducts()
-  const [selectedProductId, setSelectedProductId] = useState<string>("")
+  const [allProducts, setAllProducts] = useState<Product[]>(initialProducts)
+  const [selectedProductId, setSelectedProductId] = useState<string>(productToEditId || "")
   const [formData, setFormData] = useState<Partial<Product>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  // Update allProducts state if initialProducts prop changes (e.g., after a revalidation)
   useEffect(() => {
-    if (selectedProductId) {
-      const product = getProductById(selectedProductId)
+    setAllProducts(initialProducts)
+  }, [initialProducts])
+
+  // Set selected product if productToEditId is provided or if initialProducts changes and a product is already selected
+  useEffect(() => {
+    const idToSelect = productToEditId || selectedProductId
+    if (idToSelect) {
+      const product = allProducts.find((p) => p.id === idToSelect)
       if (product) {
-        setFormData({ ...product }) // Load all product data into form state
+        setFormData({ ...product })
+        setSelectedProductId(idToSelect) // Ensure the select input reflects the product being edited
       }
     } else {
-      setFormData({}) // Clear form if no product is selected
+      setFormData({})
     }
-  }, [selectedProductId])
+  }, [selectedProductId, allProducts, productToEditId])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target
@@ -39,6 +59,10 @@ export function AdminProductEditor() {
   const handleNumberInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target
     setFormData((prev) => ({ ...prev, [id]: Number.parseFloat(value) || 0 }))
+  }
+
+  const handleAvailabilityChange = (checked: boolean) => {
+    setFormData((prev) => ({ ...prev, isAvailable: checked }))
   }
 
   const handleRegionRateChange = (index: number, field: "region" | "rate", value: string) => {
@@ -128,8 +152,10 @@ export function AdminProductEditor() {
         title: "Product Updated!",
         description: `Details for ${result.product?.name} updated successfully.`,
       })
-      // Optionally re-fetch products or update local state to reflect changes on dashboard
-      // For this preview, changes are reflected by re-selecting the product or refreshing
+      // Update the local state with the new product data
+      setAllProducts((prevProducts) => prevProducts.map((p) => (p.id === result.product?.id ? result.product : p)))
+      onProductUpdated?.(result.product as Product) // Notify parent if callback exists
+      onClose?.() // Close dialog if callback exists
     } else {
       toast({
         title: "Update Failed",
@@ -144,24 +170,37 @@ export function AdminProductEditor() {
     <form onSubmit={handleSubmit} className="grid gap-6 p-6 border rounded-lg shadow-sm bg-white">
       <h3 className="text-xl font-semibold">Edit Product Details</h3>
 
-      <div className="grid gap-2">
-        <Label htmlFor="product-select">Select Product</Label>
-        <Select value={selectedProductId} onValueChange={setSelectedProductId}>
-          <SelectTrigger id="product-select">
-            <SelectValue placeholder="Select a product" />
-          </SelectTrigger>
-          <SelectContent>
-            {allProducts.map((product) => (
-              <SelectItem key={product.id} value={product.id}>
-                {product.name} (Category: {product.category})
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
+      {/* Only show product select if not editing a specific product via prop */}
+      {!productToEditId && (
+        <div className="grid gap-2">
+          <Label htmlFor="product-select">Select Product</Label>
+          <Select value={selectedProductId} onValueChange={setSelectedProductId}>
+            <SelectTrigger id="product-select">
+              <SelectValue placeholder="Select a product" />
+            </SelectTrigger>
+            <SelectContent>
+              {allProducts.map((product) => (
+                <SelectItem key={product.id} value={product.id}>
+                  {product.name} (Category: {product.category})
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+      )}
 
       {selectedProductId && (
         <>
+          <div className="grid gap-2">
+            <Label htmlFor="name">Product Name</Label>
+            <Input id="name" value={formData.name || ""} onChange={handleInputChange} />
+          </div>
+
+          <div className="grid gap-2">
+            <Label htmlFor="category">Category</Label>
+            <Input id="category" value={formData.category || ""} onChange={handleInputChange} />
+          </div>
+
           <div className="grid gap-2">
             <Label htmlFor="currentRate">Current Rate (Rs.)</Label>
             <Input
@@ -171,6 +210,19 @@ export function AdminProductEditor() {
               value={formData.currentRate || ""}
               onChange={handleNumberInputChange}
             />
+          </div>
+
+          <div className="grid gap-2">
+            <Label htmlFor="imageUrl">Image URL</Label>
+            <Input
+              id="imageUrl"
+              value={formData.imageUrl || ""}
+              onChange={handleInputChange}
+              placeholder="e.g., https://your-supabase-url/storage/v1/object/public/product-images/product.png"
+            />
+            <p className="text-sm text-muted-foreground">
+              Upload images to Supabase Storage and paste the public URL here.
+            </p>
           </div>
 
           <div className="grid gap-2">
@@ -184,18 +236,34 @@ export function AdminProductEditor() {
             />
           </div>
 
+          {/* New: Product Availability Checkbox */}
+          <div className="flex items-center space-x-2">
+            <Checkbox
+              id="isAvailable"
+              checked={formData.isAvailable || false}
+              onCheckedChange={handleAvailabilityChange}
+            />
+            <Label htmlFor="isAvailable">Product Available</Label>
+          </div>
+
           <div className="grid gap-4 border p-4 rounded-md">
             <h4 className="font-semibold">Region-wise Rates</h4>
             {formData.regionRates?.map((item, index) => (
               <div key={index} className="flex items-end gap-2">
                 <div className="grid gap-2 flex-1">
                   <Label htmlFor={`region-${index}`}>Region</Label>
-                  <Input
-                    id={`region-${index}`}
-                    value={item.region}
-                    onChange={(e) => handleRegionRateChange(index, "region", e.target.value)}
-                    placeholder="e.g., Punjab"
-                  />
+                  <Select value={item.region} onValueChange={(value) => handleRegionRateChange(index, "region", value)}>
+                    <SelectTrigger id={`region-${index}`}>
+                      <SelectValue placeholder="Select Region" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {PAKISTAN_REGIONS.map((region) => (
+                        <SelectItem key={region} value={region}>
+                          {region}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div className="grid gap-2 flex-1">
                   <Label htmlFor={`rate-${index}`}>Rate (Rs.)</Label>

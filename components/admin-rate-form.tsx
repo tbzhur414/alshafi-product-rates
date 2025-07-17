@@ -2,21 +2,30 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
-import { getProducts } from "@/lib/data" // Only import getProducts from data.ts
+import type { Product } from "@/lib/types" // Updated import path
 import { updateProductRate } from "@/lib/actions" // Import the server action from actions.ts
 
-export function AdminRateForm() {
+interface AdminRateFormProps {
+  initialProducts: Product[]
+}
+
+export function AdminRateForm({ initialProducts }: AdminRateFormProps) {
   const { toast } = useToast()
-  const products = getProducts() // Get current products for selection
+  const [products, setProducts] = useState<Product[]>(initialProducts) // Initialize with prop
   const [selectedProductId, setSelectedProductId] = useState<string>("")
   const [newRate, setNewRate] = useState<string>("")
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Update products state if initialProducts prop changes (e.g., after a revalidation)
+  useEffect(() => {
+    setProducts(initialProducts)
+  }, [initialProducts])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -49,6 +58,8 @@ export function AdminRateForm() {
       })
       setSelectedProductId("")
       setNewRate("")
+      // Update the local state with the new product data
+      setProducts((prevProducts) => prevProducts.map((p) => (p.id === result.product?.id ? result.product : p)))
     } else {
       toast({
         title: "Update Failed",
