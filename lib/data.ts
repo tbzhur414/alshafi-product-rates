@@ -239,7 +239,7 @@ export const initialProductsData: Product[] = [
     name: "MOP BARKAT-WHITE-G",
     category: "MOP",
     currentRate: 1800,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "BARKAT White MOP: Standard MOP product. Essential for potassium deficiency.",
     regionRates: [
       { region: "Punjab", rate: 1780 },
