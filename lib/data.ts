@@ -29,7 +29,7 @@ export const initialProductsData: Product[] = [
     name: "A-S VAH",
     category: "A-S",
     currentRate: 1300,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "Premium A-S VAH product. Limited stock, advance booking recommended.",
     regionRates: [
       { region: "Punjab", rate: 1280 },
@@ -46,7 +46,7 @@ export const initialProductsData: Product[] = [
     name: "A-S 7STAR",
     category: "A-S",
     currentRate: 850,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "A-S 7STAR: Available in various sizes. Check packaging details.",
     regionRates: [
       { region: "Punjab", rate: 830 },
@@ -65,7 +65,7 @@ export const initialProductsData: Product[] = [
     name: "CAN F PAKARAB",
     category: "CAN",
     currentRate: 900,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "PAKARAB CAN: High-fat content variant. Ideal for specific industrial applications.",
     regionRates: [
       { region: "Punjab", rate: 880 },
@@ -82,7 +82,7 @@ export const initialProductsData: Product[] = [
     name: "CAN G FATIMA",
     category: "CAN",
     currentRate: 2500,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "FATIMA CAN: Premium fertilizer. Bulk purchase options available.",
     regionRates: [
       { region: "Punjab", rate: 2480 },
@@ -135,7 +135,7 @@ export const initialProductsData: Product[] = [
     name: "DAP FFBL",
     category: "DAP",
     currentRate: 2580,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dap-sona-imported.png?height=100&width=100",
     policy: "FFBL DAP: Reliable and consistent performance. Bulk order discounts.",
     regionRates: [
       { region: "Punjab", rate: 2560 },
@@ -152,7 +152,7 @@ export const initialProductsData: Product[] = [
     name: "DAP FFC",
     category: "DAP",
     currentRate: 2570,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dap-sona.png?height=100&width=100",
     policy: "FFC DAP: Trusted brand in agriculture. Available nationwide.",
     regionRates: [
       { region: "Punjab", rate: 2550 },
@@ -169,7 +169,7 @@ export const initialProductsData: Product[] = [
     name: "DAP SARSABZ(FAT)",
     category: "DAP",
     currentRate: 2590,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dap-ss.png?height=100&width=100",
     policy: "SARSABZ DAP: Enriched formula for better yield. Seasonal availability.",
     regionRates: [
       { region: "Punjab", rate: 2570 },
@@ -203,7 +203,7 @@ export const initialProductsData: Product[] = [
     name: "VAH AUSTRALIAN",
     category: "DAP",
     currentRate: 700,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "VAH Australian: Imported quality DAP. Best for soil conditioning.",
     regionRates: [
       { region: "Punjab", rate: 680 },
@@ -258,7 +258,7 @@ export const initialProductsData: Product[] = [
     name: "NP ENGRO PLUS-18:18",
     category: "NP",
     currentRate: 1600,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "ENGRO PLUS NP: 18:18 ratio. Enhanced formula for robust plant development.",
     regionRates: [
       { region: "Punjab", rate: 1580 },
@@ -275,7 +275,7 @@ export const initialProductsData: Product[] = [
     name: "NP PAKARAB",
     category: "NP",
     currentRate: 1550,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "PAKARAB NP: Fat-enriched NP. Improves soil fertility and crop yield.",
     regionRates: [
       { region: "Punjab", rate: 1530 },
@@ -294,7 +294,7 @@ export const initialProductsData: Product[] = [
     name: "SARSABZ(SOP)",
     category: "SOP",
     currentRate: 2200,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "SARSABZ SOP: Granular SOP. Ideal for crops sensitive to chloride.",
     regionRates: [
       { region: "Punjab", rate: 2180 },
@@ -328,7 +328,7 @@ export const initialProductsData: Product[] = [
     name: "SOP-G FFC",
     category: "SOP",
     currentRate: 2180,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "FFC SOP-G: Reliable granular SOP. Widely used in horticulture.",
     regionRates: [
       { region: "Punjab", rate: 2160 },
@@ -362,7 +362,7 @@ export const initialProductsData: Product[] = [
     name: "SOP-P VAH",
     category: "SOP",
     currentRate: 2300,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "VAH SOP-P: Powder form, 25-KG bags. Quick dissolution.",
     regionRates: [
       { region: "Punjab", rate: 2280 },
@@ -381,7 +381,7 @@ export const initialProductsData: Product[] = [
     name: "SSPG TARA",
     category: "SSPG",
     currentRate: 950,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "SSPG TARA: Single Super Phosphate Granular. Essential for phosphorus supply.",
     regionRates: [
       { region: "Punjab", rate: 930 },
@@ -400,7 +400,7 @@ export const initialProductsData: Product[] = [
     name: "UREA B-S (FAT)",
     category: "UREA",
     currentRate: 3600,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "B-S FAT UREA: Fat-coated urea for slow release. Reduces nitrogen loss.",
     regionRates: [
       { region: "Punjab", rate: 3580 },
@@ -434,7 +434,7 @@ export const initialProductsData: Product[] = [
     name: "UREA ENGRO (NFML)",
     category: "UREA",
     currentRate: 3720,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "ENGRO NFML UREA: Non-Farm Mechanized Logistics. Specific distribution channels.",
     regionRates: [
       { region: "Punjab", rate: 3700 },
@@ -451,7 +451,7 @@ export const initialProductsData: Product[] = [
     name: "UREA FATIMA (NFML)(FAT)",
     category: "UREA",
     currentRate: 3680,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "FATIMA NFML FAT UREA: Fat-coated, non-farm logistics. Enhanced efficiency.",
     regionRates: [
       { region: "Punjab", rate: 3660 },
@@ -468,7 +468,7 @@ export const initialProductsData: Product[] = [
     name: "UREA FATIMA(FAT)",
     category: "UREA",
     currentRate: 3650,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "FATIMA FAT UREA: Fat-coated urea. Improved nutrient uptake.",
     regionRates: [
       { region: "Punjab", rate: 3630 },
@@ -485,7 +485,7 @@ export const initialProductsData: Product[] = [
     name: "UREA IMP.",
     category: "UREA",
     currentRate: 3400,
-    imageUrl: "products/urea-sona-ed.png?height=100&width=100",
+    imageUrl: "products/urea-sona.png?height=100&width=100",
     policy: "IMP. UREA: Imported urea. Competitive pricing.",
     regionRates: [
       { region: "Punjab", rate: 3380 },
@@ -536,7 +536,7 @@ export const initialProductsData: Product[] = [
     name: "UREA SONA-P",
     category: "UREA",
     currentRate: 3580,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "SONA-P UREA: Powdered urea. Quick action.",
     regionRates: [
       { region: "Punjab", rate: 3560 },
@@ -553,7 +553,7 @@ export const initialProductsData: Product[] = [
     name: "UREA SONA-P (NFML)",
     category: "UREA",
     currentRate: 3600,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "SONA-P NFML UREA: Powdered, non-farm logistics. Efficient delivery.",
     regionRates: [
       { region: "Punjab", rate: 3580 },
@@ -570,7 +570,7 @@ export const initialProductsData: Product[] = [
     name: "UREA TARA",
     category: "UREA",
     currentRate: 3530,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "TARA UREA: Standard urea. High nitrogen content.",
     regionRates: [
       { region: "Punjab", rate: 3510 },
@@ -587,7 +587,7 @@ export const initialProductsData: Product[] = [
     name: "UREA TARA (NFML)",
     category: "UREA",
     currentRate: 3560,
-    imageUrl: "products/dummy-bag.png?height=100&width=100",
+    imageUrl: "products/dummy-bag.jpg?height=100&width=100",
     policy: "TARA NFML UREA: Non-Farm Mechanized Logistics. Specific distribution channels.",
     regionRates: [
       { region: "Punjab", rate: 3540 },
