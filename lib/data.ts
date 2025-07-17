@@ -606,7 +606,7 @@ export const initialProductsData: Product[] = [
     name: "ZARKHAIZ PLUS(MOP)",
     category: "ZARKHAIZ",
     currentRate: 1900,
-    imageUrl: "products/zarkhaiz-plus-sop.png?height=100&width=100",
+    imageUrl: "products/zarkhaiz-plus-sop-engro.png?height=100&width=100",
     policy: "ZARKHAIZ MOP(PLUS): Premium soil enhancer. Boosts overall plant health.",
     regionRates: [
       { region: "Punjab", rate: 1880 },
